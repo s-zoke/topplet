@@ -1,0 +1,47 @@
+<template name = "submit_post">
+
+	<body>
+
+	{{> topplet}}
+
+	<div class = "container content">
+
+	{{#if currentUser}}
+
+	  <form>
+  		<div class="form-group">
+    		<label for="post-title">Title</label>
+    		<input type="text" class="form-control" name="post-title" placeholder="Title">
+  		</div>
+  		<div class="form-group">
+	      <label for="post-body">Body</label>
+	      <input type="text" class="form-control" name="post-body" placeholder="Body">
+	    </div>
+	    <div class="form-group">
+	      <label for="post-img">Image Link</label>
+	      <input type="text" class = "form-control" name="post-img" placeholder = "Optional Image Link">
+	      <p class="help-block">Optional. Direct link to image related to your post. </p>
+	    </div>
+	   	<div class="form-group">
+	      <label for="post-tags">Tags</label>
+	      <input type="text" class = "form-control" name="post-tags" placeholder = "Tags">
+	      <p class="help-block">At least 1 required. Tags relating to your post, separated by spaces. Ex. #sports #baseball #cardinals</p>
+	    </div>
+	    <button type="submit" class="btn btn-default">Submit</button>
+	  </form>
+
+	{{else}}
+
+	  <center> <h1> You must login to access this page. </h1> </center>
+
+	{{/if}}
+
+	</div>
+
+	<script> 
+		document.title = "topplet - create post";
+	</script>
+
+	</body>
+
+</template>

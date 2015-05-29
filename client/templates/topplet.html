@@ -1,0 +1,29 @@
+<template name = "topplet">
+
+	<body>
+
+	<div class = "container">
+
+	  <div class = "row">
+	  	<span class = "top-row" id = "title"> <a href = "/"> topplet </a> </span>
+	    <span class = "top-row" id = "login-buttons"> {{> loginButtons}} </span>
+	  	<span id = "create-post"> <a href = "/submit"> Create Post </a> </span>
+	  </div>	 
+
+	  {{> post_list}} 
+
+	</div>
+
+	<script>
+
+		document.title = "topplet";
+
+		Accounts.ui.config({
+  			passwordSignupFields: "USERNAME_ONLY"
+		});
+
+	</script>
+
+	</body>
+
+</template>
