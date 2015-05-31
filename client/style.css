@@ -21,5 +21,18 @@ a:hover {
 }
 
 .content {
-	margin-top: 30px;
+	margin-top: 20px;
+}
+
+#tag-input {
+	width: 70%;
+}
+
+#smaller-text {
+	font-size: 20px;
+}
+
+.fluid-container {
+	padding-left: 30px;
+	padding-right: 30px;
 }

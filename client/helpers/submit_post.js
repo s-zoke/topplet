@@ -9,9 +9,10 @@ Template.submit_post.events ({
 			title : $(e.target).find('[name=post-title]').val(),
 			body : $(e.target).find('[name=post-body]').val(),
 			img : $(e.target).find('[name=post-img]').val(),
-			tags : $(e.target).find('[name=post-tags]').val(), 
+			tags : $(e.target).find('[name=post-tags]').val().split(' '), 
 			score : 0,
-			author : Meteor.user().username
+			author : Meteor.user().username,
+			date : new Date
 
 		});
 

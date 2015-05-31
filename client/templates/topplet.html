@@ -5,18 +5,21 @@
 	<div class = "container">
 
 	  <div class = "row">
-	  	<span class = "top-row" id = "title"> <a href = "/"> topplet </a> </span>
+	  	<span class = "top-row" id = "title"> <a href = "/t/all"> topplet </a> </span>
 	    <span class = "top-row" id = "login-buttons"> {{> loginButtons}} </span>
 	  	<span id = "create-post"> <a href = "/submit"> Create Post </a> </span>
-	  </div>	 
 
-	  {{> post_list}} 
+	  </div>	 
 
 	</div>
 
 	<script>
 
 		document.title = "topplet";
+
+		if(window.location.pathname === "/") {
+			window.location.pathname = "/t/all";
+		}
 
 		Accounts.ui.config({
   			passwordSignupFields: "USERNAME_ONLY"

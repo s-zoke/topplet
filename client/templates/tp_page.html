@@ -1,0 +1,51 @@
+<template name = 'tpPage'>
+
+	{{> topplet}}
+
+<div class = "container content">
+
+	<center>
+
+				<div class="input-group" id = "tag-input" >
+		      <input type="text" class="form-control" id = "filter_input" placeholder="filter by tag">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" id = "tag_btn" type="button">go</button>
+		      </span>
+		    </div>
+
+	</center>
+
+	{{#each filtered_posts}}
+		{{> post_item}}
+	{{/each}}
+	
+</div>
+
+<script>
+
+	$('#tag_btn').click(function () {
+			window.location.pathname = '/t/' + $('#filter_input').val();
+	});
+
+	   $('#filter_input').on('keypress', function (event) {
+         if(event.which === 13){
+
+            //Disable textbox to prevent multiple submit
+            $(this).attr("disabled", "disabled");
+
+            if($('#filter_input').val() !== null){
+
+            	window.location.pathname = '/t/' + $('#filter_input').val();
+
+          	} else {
+
+          		window.location.pathname = '/t/all';
+
+          }
+
+         }
+   });
+
+</script>
+
+</template>
