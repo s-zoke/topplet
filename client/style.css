@@ -36,3 +36,26 @@ a:hover {
 	padding-left: 30px;
 	padding-right: 30px;
 }
+
+#item_content {
+	padding-left: 20px;
+}
+
+#item_score {
+	font-size: 30px;
+	position: relative;
+	bottom: 25px;
+}
+
+.glyphicon-chevron-up {
+	font-size: 20px;
+}
+
+#uplink:visited #uplink:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+.block {
+	display: inline-block;
+}

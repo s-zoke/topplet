@@ -1,7 +1,41 @@
 <template name = "post_item">
 
-<h2> {{title}} <span id = "smaller-text">- {{author}} - {{date}}</span> </h2>
-<img src = {{img}}/>
-<p> {{body}} </p>
+<span id = "item_score" class = "block">
+<a id = "uplink" href = "#"> <span class = "glyphicon glyphicon-chevron-up block" aria-hidden = "true"></span> </a>
+	{{score}}
+</span>
+
+<span id = "item_content" class = "block">
+
+	<h2> {{title}} <span id = "smaller-text">- {{author}} - {{date}}</span> </h2>
+
+	<p> {{body}} </p>
+
+</span>
+
+	<div id = "post_image">
+		<img src = {{img}}/>
+	</div>
+
+	<video id = "post_webm">
+		<source src = {{img}}/>
+	</video>
+
+<br/>
+
+<script>
+
+$('#post_image #post_webm').hide();
+var imgType = {{imgType}};
+
+if(imgType == "jpg" || imgType == "png"){
+	$('#post_image').show();
+} 
+
+if(imgType == "webm" || imgType == "gifv") {
+	$('#post_webm').show();
+} 
+
+</script>
 
 </template>
