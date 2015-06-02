@@ -23,3 +23,12 @@ Template.submit_post.events ({
 	}
 
 });
+
+Template.submit_post.events ({
+	imgType : function () {
+		var url = document.getElementById('#post-img');
+		var filename_array = url.split('.');
+		var filename = filename_array[filename_array.length-1];
+		return String(filename);
+	}
+})

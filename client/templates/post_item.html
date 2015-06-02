@@ -13,29 +13,13 @@
 
 </span>
 
-	<div id = "post_image">
-		<img src = {{img}}/>
-	</div>
+	{{#if hasImg}}
+		<div id = "post_image">
+			<img src = {{img}}/>
+		</div>
+	{{/if}}
 
-	<video id = "post_webm">
-		<source src = {{img}}/>
-	</video>
 
 <br/>
-
-<script>
-
-$('#post_image #post_webm').hide();
-var imgType = {{imgType}};
-
-if(imgType == "jpg" || imgType == "png"){
-	$('#post_image').show();
-} 
-
-if(imgType == "webm" || imgType == "gifv") {
-	$('#post_webm').show();
-} 
-
-</script>
 
 </template>
